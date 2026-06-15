@@ -2,7 +2,8 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 //Patients
-import registerPatientRoute from "./src/routes/patientRegisterRoute.js"
+import registerPatientRoute from "./src/routes/patientRegisterRoute.js";
+import loginPatientRoute from "./src/routes/patientLoginRoute.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/register", registerPatientRoute);
+app.use("/api/login", loginPatientRoute);
 
 
 export default app;
