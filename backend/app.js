@@ -7,6 +7,8 @@ import loginPatientRoute from "./src/routes/patientLoginRoute.js";
 import logOutRoute from "./src/routes/patientLogOutRoute.js"
 import patientControllerRoute from "./src/routes/patientControllerRoute.js"
 import patientRecoveryRoute from "./src/routes/patientRecoveryRoute.js"
+//Especialidades
+import specialityRoute from "./src/routes/specialityRoutes.js";
 
 const app = express();
 
@@ -23,5 +25,6 @@ app.use("/api/login", loginPatientRoute);
 app.use("/api/logout", logOutRoute);
 app.use("/api/patient", patientControllerRoute);
 app.use("/api/reovery", patientRecoveryRoute);
+app.use("/api/specialitys", specialityRoute);
 
 export default app;
