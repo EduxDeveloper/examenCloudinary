@@ -27,6 +27,7 @@ registerController.register = async (req, res) => {
         */ 
         const {name, lastname, email, password, birthDate, phone, phoneEmergencyContacts, isVerified, loginAttemps, timeOut} = req.body;
 
+
         const passwordHashed = await bcryptjs.hash(password, 10);
 
         const randomCode = crypto.randomBytes(3).toString("hex");
@@ -82,7 +83,7 @@ registerController.verifyCode = async (req, res) =>{
         }
 
         const newPatient = patientModel({ name, lastname, email, password, birthDate, phone, phoneEmergencyContacts, profilePhoto, public_id, 
-            isVerified: true, loginAttemps, timeOut});
+            isVerified: true,});
 
         await newPatient.save();
         

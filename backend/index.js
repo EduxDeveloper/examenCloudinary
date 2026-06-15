@@ -1,5 +1,6 @@
 import app from "./app.js"
 import "./database.js"//esto no se si quitarlo
+import { config } from "./config.js"
 
 async function main() {
     app.listen(4000)

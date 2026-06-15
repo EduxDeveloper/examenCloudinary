@@ -1,5 +1,5 @@
 import multer from "multer";
-import { cloudinaryStorage } from "multer-storage-cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
 import { v2 as cloudinary } from "cloudinary";
 import { config } from "../../config.js";
 
@@ -9,7 +9,7 @@ cloudinary.config({
     api_secret: config.cloudinary.cloudinary_api_secret,
 });
 
-const storage = new cloudinaryStorage({
+const storage = new CloudinaryStorage({
     cloudinary,
         params:{
             folder: "evaluacion",
