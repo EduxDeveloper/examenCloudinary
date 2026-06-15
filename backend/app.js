@@ -13,6 +13,8 @@ import specialityRoute from "./src/routes/specialityRoutes.js";
 import appoimentRoute from "./src/routes/appoimentRoute.js"
 //Expedientes
 import expedienteRoute from "./src/routes/expedientesRoute.js"
+//Equipamiento
+import equipamientoRoute from "./src/routes/equipamentRoute.js"
 
 const app = express();
 
@@ -32,5 +34,6 @@ app.use("/api/reovery", patientRecoveryRoute);
 app.use("/api/specialitys", specialityRoute);
 app.use("/api/appoiment", appoimentRoute);
 app.use("/api/expediente", expedienteRoute);
+app.use("/api/equipamiento", equipamientoRoute)
 
 export default app;
