@@ -4,6 +4,8 @@ import cors from "cors";
 //Patients
 import registerPatientRoute from "./src/routes/patientRegisterRoute.js";
 import loginPatientRoute from "./src/routes/patientLoginRoute.js";
+import logOutRoute from "./src/routes/patientLogOutRoute.js"
+import patientControllerRoute from "./src/routes/patientControllerRoute.js"
 
 const app = express();
 
@@ -17,6 +19,7 @@ app.use(express.json());
 
 app.use("/api/register", registerPatientRoute);
 app.use("/api/login", loginPatientRoute);
-
+app.use("/api/logout", logOutRoute);
+app.use("/api/patient", patientControllerRoute);
 
 export default app;
