@@ -11,6 +11,8 @@ import patientRecoveryRoute from "./src/routes/patientRecoveryRoute.js"
 import specialityRoute from "./src/routes/specialityRoutes.js";
 //Citas
 import appoimentRoute from "./src/routes/appoimentRoute.js"
+//Expedientes
+import expedienteRoute from "./src/routes/expedientesRoute.js"
 
 const app = express();
 
@@ -29,5 +31,6 @@ app.use("/api/patient", patientControllerRoute);
 app.use("/api/reovery", patientRecoveryRoute);
 app.use("/api/specialitys", specialityRoute);
 app.use("/api/appoiment", appoimentRoute);
+app.use("/api/expediente", expedienteRoute);
 
 export default app;
